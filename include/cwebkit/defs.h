@@ -1,0 +1,9 @@
+#ifndef CWEBKIT_DEFS_H
+#define CWEBKIT_DEFS_H
+
+#define CWEBKIT_APP_SCHEME "app://"
+#define CWEBKIT_WEB_FOLDER "public"
+
+#define CWEBKIT_DEFAULT CWEBKIT_APP_SCHEME
+
+#endif

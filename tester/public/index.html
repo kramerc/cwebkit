@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tester</title>
+	<link rel="stylesheet" href="stylesheets/application.css" type="text/css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			window.resizeTo(500, 250);
+
+			$("#test").submit(function(e) {
+				e.preventDefault();
+				document.title = $("#title").val();
+			});
+
+			$("#title").keyup(function() {
+				// CWebKit supports document.title
+				document.title = $("#title").val();
+			})
+		});
+	</script>
+</head>
+<body>
+	<h1>Tester</h1>
+	<p>Have you imagined creating kickass GUI desktop applications in HTML?</p>
+	<form action="" method="get" id="test">
+		<input type="text" id="title" />
+		<input type="submit" value="Change Title" />
+	</form>
+	<p>
+		<a href="javascript:self.close();">Close this window</a><br />
+		<a href="javascript:window.open('app://');">Open a window</a><br />
+		<a href="javascript:alert('tester.test(): ' + tester.test());">Test custom C binding</a><br />
+		<a href="javascript:cwebkit.exit(0);">Exit</a>
+	</p>
+</body>
+</html>

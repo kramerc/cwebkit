@@ -1,0 +1,7 @@
+body {
+	margin: 0;
+}
+
+h1:first-child {
+	margin-top: 0;
+}
